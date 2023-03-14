@@ -1,41 +1,60 @@
-// 1.Find the Length of a String
-// Setup
-let lastNameLength = 0;
-const lastName = "Lovelace";
+// 11.Modify Array Data With Indexes
+// const myArray = [18, 64, 99];
+// myArray[0]=45;
+
+// 12.Access Multi-Dimensional Arrays With Indexes
+// const myArray = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//     [[10, 11, 12], 13, 14],
+//   ];
+
+//   const myData = myArray[2][1];
+
+//13. Manipulate Arrays With push Method
+//   const myArray = [["John", 23], ["cat", 2]];
+// myArray.push(["dog", 3]);
+
+// 14.Manipulate Arrays With pop Method
+const myArray = [
+  ["John", 23],
+  ["cat", 2],
+];
 
 // Only change code below this line
-lastNameLength = lastName.length;
+// const removedFromMyArray=myArray.pop();
 
-//2. Use Bracket Notation to Find the First Character in a String
-firstLetterOfLastName = lastName[0]; 
+// 15.Manipulate Arrays With shift Method
+const removedFromMyArray = myArray.shift();
 
-// 3. Understand String Immutability
-let myStr = "Jello World";
-myStr = "Hello World";
+// 16.Manipulate Arrays With unshift Method
+myArray.unshift(["Paul", 35]);
 
-// 4.Use Bracket Notation to Find the Nth Character in a String
-const thirdLetterOfLastName = lastName[2];
+// 17.Shopping List
+const myList = [
+  ["Chocolate Bar", 15],
+  ["Chocolate Bar", 15],
+  ["Chocolate Bar", 15],
+  ["Chocolate Bar", 15],
+  ["Chocolate Bar", 15],
+];
 
+// 18.Write Reusable JavaScript with Functions
+function reusableFunction() {
+    console.log("Hi World");
+  }
+  reusableFunction();
 
-// 5.Use Bracket Notation to Find the Last Character in a String
-const lastLetterOfLastName = lastName[lastName.length -1];
+//   19.Passing Values to Functions with Arguments
+function functionWithArgs(param1, param2) {
+    console.log(param1 +param2);
+  }
+  functionWithArgs(1,2);
 
-// 6.Use Bracket Notation to Find the Nth-to-Last Character in a String
-const secondToLastLetterOfLastName = lastName[lastName.length-2];
-
-// 7.Word Blanks
-const myNoun = "dog";
-const myAdjective = "big";
-const myVerb = "ran";
-const myAdverb = "quickly";
-const wordBlanks = myNoun+" "+myAdjective+" "+myVerb+" "+" "+myAdverb ;
-
-// 8.Store Multiple Values in one Variable using JavaScript Arrays
-const myArray = ["hello",25];
-
-// 9.Nest one Array within Another Array
-const Array = [["Bulls", 23], ["White Sox", 45]];
-
-// 10.Access Array Data with Indexes
-const rray = [50, 60, 70];
-const myData=rray[0];
+//   20.Return a Value from a Function with Return
+function  timesFive(num) {
+    return num * 5;
+  }
+  
+  const answer =  timesFive(5);
