@@ -1,60 +1,125 @@
-// 11.Modify Array Data With Indexes
-// const myArray = [18, 64, 99];
-// myArray[0]=45;
+// 21.Global Scope and Functions
+// Declare the myGlobal variable below this line
 
-// 12.Access Multi-Dimensional Arrays With Indexes
-// const myArray = [
-//     [1, 2, 3],
-//     [4, 5, 6],
-//     [7, 8, 9],
-//     [[10, 11, 12], 13, 14],
-//   ];
+const myGlobal=10;
+function fun1() {
+  // Assign 5 to oopsGlobal here
+oopsGlobal=5;
+}
 
-//   const myData = myArray[2][1];
+// Only change code above this line
 
-//13. Manipulate Arrays With push Method
-//   const myArray = [["John", 23], ["cat", 2]];
-// myArray.push(["dog", 3]);
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
 
-// 14.Manipulate Arrays With pop Method
-const myArray = [
-  ["John", 23],
-  ["cat", 2],
-];
+// 22Local Scope and Functions
+function myLocalScope() {
+    // Only change code below this line
+    let myVar;
+    console.log('inside myLocalScope', myVar);
+  }
+  myLocalScope();
+  
+  // Run and check the console
+  // myVar is not defined outside of myLocalScope
+  console.log('outside myLocalScope', myVar);
+
+//   23. Global vs. Local Scope in Functions
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  // Only change code below this line
+ const outerWear="sweater"
+  // Only change code above this line
+  return outerWear;
+}
+
+myOutfit();
+  
+// 24.Understanding Undefined Value returned from a Function
+// Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
 
 // Only change code below this line
-// const removedFromMyArray=myArray.pop();
+function addFive() {
+  sum = sum + 5;
+}
 
-// 15.Manipulate Arrays With shift Method
-const removedFromMyArray = myArray.shift();
 
-// 16.Manipulate Arrays With unshift Method
-myArray.unshift(["Paul", 35]);
+// Only change code above this line
 
-// 17.Shopping List
-const myList = [
-  ["Chocolate Bar", 15],
-  ["Chocolate Bar", 15],
-  ["Chocolate Bar", 15],
-  ["Chocolate Bar", 15],
-  ["Chocolate Bar", 15],
-];
+addThree();
+addFive();
 
-// 18.Write Reusable JavaScript with Functions
-function reusableFunction() {
-    console.log("Hi World");
+
+// 25.Assignment with a Returned Value
+let processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+// Only change code below this line
+processed=processArg(7);
+
+// 26.Stand in Line
+function nextInLine(arr, item) {
+    // Only change code below this line
+    arr.push(item);
+    const vari=arr.shift();
+    
+    return vari;
+    // Only change code above this line
   }
-  reusableFunction();
 
-//   19.Passing Values to Functions with Arguments
-function functionWithArgs(param1, param2) {
-    console.log(param1 +param2);
+//   27.Understanding Boolean Values
+function welcomeToBooleans() {
+    // Only change code below this line
+  
+    return true; // Change this line
+  
+    // Only change code above this line
   }
-  functionWithArgs(1,2);
 
-//   20.Return a Value from a Function with Return
-function  timesFive(num) {
-    return num * 5;
+//   28.Use Conditional Logic with If Statements
+function trueOrFalse(wasThatTrue) {
+    // Only change code below this line
+  if(wasThatTrue==true)
+  return  "Yes, that was true";
+  else 
+  return  "No, that was false"}
+
+//   29.Comparison with the Equality Operator
+// Setup
+function testEqual(val) {
+    if (val==12) { // Change this line
+      return "Equal";
+    }
+    return "Not Equal";
   }
   
-  const answer =  timesFive(5);
+  testEqual(10);
+
+//   30.Comparison with the Strict Equality Operator
+
+// Setup
+function testStrict(val) {
+    if (val===7) { // Change this line
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+  
+  testStrict(10);
